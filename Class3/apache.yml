@@ -1,0 +1,12 @@
+- name: Install mysql
+  yum:
+    name: 
+      - mariadb
+      - mariadb-server
+    state: present
+
+- name: Enable mysql
+  service:
+    name: mariadb
+    state: started
+    enabled: yes
